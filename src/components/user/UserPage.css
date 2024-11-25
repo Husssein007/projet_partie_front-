@@ -1,0 +1,150 @@
+/* UserPage.css */
+
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.user-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.user-sidebar {
+    width: 250px;
+    background-color: #d32f2f;
+    padding: 20px;
+    color: white;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.user-sidebar h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.user-sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.user-sidebar ul li {
+    margin-bottom: 20px;
+}
+
+.user-sidebar ul li a {
+    color: white;
+    font-size: 1.1rem;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.user-sidebar ul li a:hover {
+    background-color: #c62828;
+}
+
+.user-main {
+    flex-grow: 1;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 1200px;
+}
+
+.user-main h1 {
+    font-size: 2rem;
+    color: #d32f2f;
+    margin-bottom: 20px;
+}
+
+.user-main .profile-info {
+    margin-bottom: 30px;
+}
+
+.user-main .profile-info p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.user-main .profile-info span {
+    font-weight: bold;
+}
+
+.user-main .edit-button {
+    background-color: #d32f2f;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+}
+
+.user-main .edit-button:hover {
+    background-color: #c62828;
+}
+
+.user-main .activity-log {
+    margin-top: 40px;
+}
+
+.user-main .activity-log h2 {
+    font-size: 1.5rem;
+    color: #d32f2f;
+    margin-bottom: 20px;
+}
+
+.user-main .activity-log ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.user-main .activity-log ul li {
+    background-color: #f9f9f9;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.user-main .activity-log ul li span {
+    font-weight: bold;
+}
+@media (max-width: 768px) {
+    .user-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .user-sidebar {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .user-main {
+        width: 100%;
+    }
+}

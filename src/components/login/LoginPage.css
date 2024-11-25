@@ -1,0 +1,205 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ff4b2b, #000000);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Wrapper */
+.wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  overflow: hidden;
+}
+
+/* Gym Logo Section */
+.logo {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.logo img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 10px;
+}
+
+.logo h1 {
+  font-size: 40px;
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  margin-bottom: 10px;
+}
+
+/* Login Form */
+.login-container {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 40px 50px;
+  border-radius: 15px;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.4);
+  width: 400px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  animation: fadeIn 1s ease-out;
+}
+
+.login-container h2 {
+  font-size: 32px;
+  color: #ff4b2b;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.login-container p {
+  color: #ddd;
+  margin-bottom: 30px;
+  font-size: 16px;
+  opacity: 0.8;
+}
+
+/* Input Box Styles */
+.input-box {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 15px 40px;
+  background: rgba(0, 0, 0, 0.8);
+  border: 1px solid #333;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 16px;
+  letter-spacing: 1px;
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+.input-box input:focus {
+  border: 1px solid #ff4b2b;
+}
+
+.input-box label {
+  position: absolute;
+  top: 0;
+  left: 15px;
+  color: #fff;
+  font-size: 16px;
+  transition: 0.3s ease;
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+.input-box input:focus ~ label,
+.input-box input:not(:focus):valid ~ label {
+  top: -20px;
+  left: 10px;
+  font-size: 14px;
+  opacity: 1;
+}
+
+/* Login Button */
+.btn.login-btn {
+  background: #ff4b2b;
+  color: #fff;
+  padding: 15px 40px;
+  border: none;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  width: 100%;
+}
+
+.btn.login-btn:hover {
+  background: #e43d25;
+  transform: translateY(-3px);
+}
+
+/* Register Link */
+.login-register p {
+  color: #fff;
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+.register-link {
+  color: #ff4b2b;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.register-link:hover {
+  color: #fff;
+}
+
+/* Background Image Section */
+.bg-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url('https://media.istockphoto.com/id/1213615970/photo/gym-background-fitness-weight-equipment-on-empty-dark-floor.jpg?s=612x612&w=0&k=20&c=WyPxLxpfd9Pi6l0BMyWsqrrZIi_SrMmgTtYn8k08qQI=') center/cover no-repeat;
+  opacity: 5;
+  z-index: 0;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .login-container {
+    width: 90%;
+    padding: 30px 40px;
+  }
+
+  .logo h1 {
+    font-size: 32px;
+  }
+
+  .login-container h2 {
+    font-size: 28px;
+  }
+
+  .input-box input {
+    padding: 12px 35px;
+  }
+
+  .btn.login-btn {
+    font-size: 16px;
+    padding: 12px 30px;
+  }
+}
